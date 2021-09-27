@@ -11,8 +11,8 @@ def factorize(n):
 
     dividend = n
     divisors = []
-    number_decomposition = f"{n} ="
-
+    #number_decomposition = f"{n} ="
+    number_decomposition = "%s =" %(n)
     while dividend > 1:
         for prime in list(filter(lambda x: x <= dividend, prime_numbers)):
             if dividend % prime == 0:
@@ -21,11 +21,10 @@ def factorize(n):
                 break
 
         while len(divisors):
-            number_decomposition += f" {divisors.pop(0)} *"
+            number_decomposition += " %s *" % (divisors.pop(0))
 
     number_decomposition = number_decomposition[:-1]
     print(number_decomposition)
-
 
 if __name__ == "__main__":
     factorize(360)
