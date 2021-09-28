@@ -5,12 +5,9 @@ def factorize(n):
     while dividend > 1:
         for prime in range(2, dividend + 1):
             if dividend % prime == 0:
-                divisors.append(prime)
+                number_decomposition += " %s *" % (prime)
                 dividend = int(dividend / prime)
                 break
-
-        while len(divisors):
-            number_decomposition += " %s *" % (divisors.pop(0))
 
     number_decomposition = number_decomposition[:-2]
     print(number_decomposition)
