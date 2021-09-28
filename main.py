@@ -1,6 +1,5 @@
 def factorize(n):
     dividend = n
-    divisors = []
     number_decomposition = "%s =" % (n)
     while dividend > 1:
         for prime in range(2, dividend + 1):
